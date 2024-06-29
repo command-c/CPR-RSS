@@ -21,7 +21,7 @@ def read_page(url, delay=30, signature='note'):
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('blink-settings=imagesEnabled=false')
     # Please use the correct chrome driver
-    browser = webdriver.Chrome(ChromeDriverManager(version="104.0.5112.79").install(), chrome_options=chrome_options)
+    browser = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
     browser.get(url)
     try:
         _ = WebDriverWait(browser, delay).until(
